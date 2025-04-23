@@ -27,6 +27,7 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
+  className?: string;
 }
 
 const baseStyles = 'rounded-md font-medium transition-colors';
@@ -49,13 +50,14 @@ const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   size = 'md',
   disabled = false,
+  className = '',
 }) => {
 
   return (
     <button
       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${
         disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
-      }`}
+      } ${className}`}
       onClick={onClick}
       disabled={disabled}
     >

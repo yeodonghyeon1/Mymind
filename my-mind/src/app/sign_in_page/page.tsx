@@ -5,7 +5,7 @@ export default function Page2() {
         <div className="container-fluid">
             <Navigation_Bar></Navigation_Bar>
             <div className="flex-grow max-w-6xl mx-auto p-4 mt-20">
-                    <h1>페이지</h1>
+                    <h1>sign_in</h1>
             </div>
         </div>
     );
