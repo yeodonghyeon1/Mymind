@@ -9,7 +9,7 @@ import Navigation_Bar from "@/components/navigation_bar";
 import Campus from "@/components/campus";
 import useZoom from '@/hooks/zoom';
 import BaseNode from "@/components/node";
-
+import ToolBar from "@/components/tool_bar"
 
 // 연습 페이지
 const Nav = () => {
@@ -31,12 +31,13 @@ export default function Home() {
   return (
       <main className="flex-grow max-w-6xl mx-auto p-4 mt-20">
         {/* 캠퍼스 */}
-        <Campus> 
-          <BaseNode onClick={() => {}} hide={false} context="안녕" />
+        <Campus>
+            <BaseNode onClick={() => {}} hide={false} context="안녕" />
+
         </Campus>
 
         {/* tool_bar */}
-        <div className="shadow-lg p-8 mx-auto flex justify-between bg-white border-2 border-gray-500 items-end max-w-screen-lg rounded-2xl fixed bottom-10 left-0 right-0"/>
+        <ToolBar/>
       </main>
   );
 }

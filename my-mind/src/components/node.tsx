@@ -10,8 +10,8 @@ children: 상속 prop
 Onclick(): 노드에 대한 정보 게시글 오픈용으로 사용할 것임
 Size: 부모 자식 노드 간의 크기 설정으로 사용할 것이고 사용자가 직접 custom 할 수 있게 할 것임
 hide: 숨기거나 오픈할 수 있게 할 것임
-
 */
+
 interface Node{
     onClick: () => void;
     size?: 'sm' | 'md' | 'lg' | 'custom';
@@ -53,12 +53,10 @@ const BaseNode:React.FC<Node> =  ({
                   element.style.left = `${adjustedX}px`;
                   element.style.top = `${adjustedY}px`;
                 };
-
                 const onMouseUp = () => {
                   document.removeEventListener('mousemove', onMouseMove);
                   document.removeEventListener('mouseup', onMouseUp);
                 };
-
                 document.addEventListener('mousemove', onMouseMove);
                 document.addEventListener('mouseup', onMouseUp);
               }}
